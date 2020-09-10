@@ -1,23 +1,29 @@
-#page-login{
-  min-height: 100%;
-  background-color: #F1F5FD;
+#page-login {
+  display: flex;
 
-  &.page-registration{
-    background: linear-gradient(180deg, #FFFFFF 0%, #F1F5FD 100%);
+  &.page-registration {
+    body{
+      background: linear-gradient(180deg, #FFFFFF 0%, #F1F5FD 100%);
+    }
 
-    aside{
+    aside {
       padding: 40px;
       font-size: 14px;
       line-height: 21px;
       letter-spacing: 0.01em;
 
-      @include mobile{
+      @include mobile {
         padding: 20px;
       }
     }
   }
 
-  .page-wrapper{
+  body{
+    min-height: 100%;
+    background-color: #F1F5FD;
+  }
+
+  .page-wrapper {
     max-width: 1600px;
     margin: 0 auto;
     min-height: 100%;
@@ -26,80 +32,79 @@
     flex-wrap: wrap;
   }
 
-  aside{
+  aside {
     width: 350px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     background-color: #F1F5FD;
 
-    @include tablet{
+    @include tablet {
       width: 300px;
     }
 
-    @include mobile{
+    @include mobile {
       width: 100%;
       min-height: auto;
       order: 2;
       margin: 40px 0 0;
     }
 
-    .img-container{
+    .img-container {
       width: 100%;
 
-      img{
+      img {
         width: 100%;
         display: block;
       }
     }
 
-    .quote-container{
+    .quote-container {
       width: 100%;
       background: #F59D1B url("../images/icon-quotes.svg") -15px -41px no-repeat;
       padding: 50px 0 48px;
       flex-grow: 1;
       overflow: hidden;
 
-      .slider-container{
+      .slider-container {
         display: flex;
         height: 0;
         opacity: 0;
         flex-wrap: wrap;
 
-        &.shown{
+        &.shown {
           height: auto;
           opacity: 1;
         }
 
-        .slide{
+        .slide {
           color: #fff;
           padding: 0 50px 0 43px;
 
-          @include tablet{
+          @include tablet {
             padding: 0 25px;
           }
 
-          &:focus{
+          &:focus {
             outline: none;
           }
 
-          .quote-text{
+          .quote-text {
             font-size: 18px;
             line-height: 27px;
             font-weight: 500;
             font-style: italic;
             letter-spacing: 0.01em;
-
           }
 
-          .quote-owner{
+          .quote-owner {
             font-size: 16px;
             line-height: 24px;
             font-weight: 500;
             font-style: normal;
             margin: 20px 0 0;
 
-            span{
+            span {
               font-size: 14px;
               line-height: 21px;
               opacity: 0.5;
@@ -109,12 +114,12 @@
           }
         }
 
-        .slick-list{
+        .slick-list {
           width: 100%;
           margin: 0 0 14px;
         }
 
-        .slick-arrow{
+        .slick-arrow {
           width: 20px;
           height: 21px;
           position: static;
@@ -123,16 +128,15 @@
           transform: none;
           align-self: flex-start;
 
-
-          &:before{
+          &:before {
             display: none;
           }
 
-          &.slick-prev{
+          &.slick-prev {
             transform: rotate(180deg);
             margin: 0 0 0 37px;
 
-            @include tablet{
+            @include tablet {
               margin: 0 0 0 21px;
             }
           }
@@ -140,7 +144,7 @@
       }
     }
 
-    .logo{
+    .logo {
       width: 175px;
       height: 37px;
       background-image: url("../images/logo.svg");
@@ -148,78 +152,77 @@
       display: block;
     }
 
-    .use-cases{
+    .use-cases {
       margin: 135px 0 0;
 
-      @include mobile{
+      @include mobile {
         margin: 50px 0 0;
       }
 
-      h3{
+      h3 {
         font-size: 18px;
         font-weight: 600;
         line-height: 27px;
       }
 
-      p{
+      p {
         margin: 20px 0 0;
         color: $col_grey;
       }
 
-      ul{
+      ul {
         padding: 0 0 0 12px;
         margin: 20px 0 0;
         color: $col_grey;
 
-        li{
-          &:before{
+        li {
+          &:before {
             content: '•';
             margin: 0 4px 0 0;
           }
-
         }
       }
     }
 
-    .icon-container{
+    .icon-container {
       margin: 134px 0 0 -14px;
 
-      @include tablet{
+      @include tablet {
         margin: 134px 0 0 -40px;
       }
 
-      @include mobile{
+      @include mobile {
         margin: 50px 0 0 -14px;
       }
 
-      img{
+      img {
         display: block;
       }
     }
 
-    .copy{
+    .copy {
       margin: 77px 0 0;
       opacity: 0.5;
 
-      @include mobile{
+      @include mobile {
         margin: 30px 0 0;
       }
     }
   }
 
-  .page-content{
+  .page-content {
     flex-grow: 1;
     text-align: center;
     position: relative;
     align-items: center;
     display: flex;
 
-    @include mobile{
+    @include mobile {
       padding: 30px 20px 0;
       display: block;
     }
 
-    .logo{
+    .logo {
       width: 175px;
       height: 37px;
       background-image: url("../images/logo.svg");
@@ -231,83 +234,76 @@
       left: 0;
       right: 0;
 
-      @include mobile{
+      @include mobile {
         position: static;
       }
     }
 
-    .inner-content{
+    .inner-content {
       max-width: 411px;
       margin: 0 auto;
 
-      .heading-container{
-        @include mobile{
+      .heading-container {
+        @include mobile {
           margin: 30px 0 0;
         }
 
-        .heading{
+        .heading {
           font-size: 24px;
           line-height: 24px;
           font-weight: 600;
         }
 
-        .sub-heading{
+        .sub-heading {
           font-size: 14px;
           line-height: 28px;
           color: $col_grey;
           margin: 14px 0 0;
 
-          @include mobile{
+          @include mobile {
             line-height: 20px;
           }
         }
-
       }
 
-      .form{
+      .form {
         max-width: 400px;
         margin: 50px auto 0;
 
-        .text-input{
-
-        }
-
-        .login-options{
+        .login-options {
           margin: 20px 0 0;
           display: flex;
           justify-content: space-between;
 
-          .remember{
-
-            input{
+          .remember {
+            input {
               position: fixed;
               opacity: 0;
               pointer-events: none;
 
-              &:focus{
-                & + label{
-                  &:before{
+              &:focus {
+                & + label {
+                  &:before {
                     border-color: $col_blue;
                   }
                 }
               }
 
-              &:checked{
-                & + label{
-                  &:before{
+              &:checked {
+                & + label {
+                  &:before {
                     background-color: $col_blue;
                     border-color: $col_blue;
                   }
 
-                  &:after{
+                  &:after {
                     opacity: 1;
                   }
                 }
               }
-
             }
 
-            label{
+            label {
               font-size: 14px;
               line-height: 24px;
               position: relative;
@@ -315,13 +311,13 @@
               cursor: pointer;
 
               &:before,
-              &:after{
+              &:after {
                 content: '';
                 position: absolute;
                 transition: all 0.1s;
               }
 
-              &:before{
+              &:before {
                 width: 16px;
                 height: 16px;
                 border-radius: 2px;
@@ -331,7 +327,7 @@
                 left: 1px;
               }
 
-              &:after{
+              &:after {
                 width: 10px;
                 height: 9px;
                 background-image: url("../images/icon-tick.svg");
@@ -342,26 +338,26 @@
             }
           }
 
-          .forgot-pass{
+          .forgot-pass {
             font-size: 14px;
             line-height: 24px;
             margin: 0 0 0;
           }
         }
 
-        .btn-login{
+        .btn-login {
           width: 100%;
           margin: 20px 0 0;
           padding: 12px;
         }
 
-        .get-started{
+        .get-started {
           font-size: 14px;
           line-height: 14px;
           color: $col_dark_black;
           margin: 30px 0 0;
 
-          a{
+          a {
             text-decoration: underline;
             color: #969DB6;
           }
@@ -369,5 +365,23 @@
       }
     }
 
+    .book-container {
+      width: 100%;
+      min-height: 100%;
+      margin: 0 auto;
+      padding: 165px 30px 50px;
+      display: flex;
+
+      @include mobile {
+        min-height: 600px;
+        padding: 50px 20px 30px;
+      }
+
+      .calendly-inline-widget {
+        width: 100%;
+        min-width: 320px;
+        flex-grow: 1;
+      }
+    }
   }
 }

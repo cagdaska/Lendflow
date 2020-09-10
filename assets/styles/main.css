@@ -70,7 +70,6 @@ input::-webkit-inner-spin-button {
 
 html {
   min-height: 100%;
-  display: flex;
 }
 
 body {
@@ -856,10 +855,9 @@ body {
 }
 
 #page-login {
-  min-height: 100%;
-  background-color: #F1F5FD;
+  display: flex;
 }
-#page-login.page-registration {
+#page-login.page-registration body {
   background: linear-gradient(180deg, #FFFFFF 0%, #F1F5FD 100%);
 }
 #page-login.page-registration aside {
@@ -872,6 +870,10 @@ body {
   #page-login.page-registration aside {
     padding: 20px;
   }
+}
+#page-login body {
+  min-height: 100%;
+  background-color: #F1F5FD;
 }
 #page-login .page-wrapper {
   max-width: 1600px;
@@ -1168,6 +1170,24 @@ body {
 #page-login .page-content .inner-content .form .get-started a {
   text-decoration: underline;
   color: #969DB6;
+}
+#page-login .page-content .book-container {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 165px 30px 50px;
+  display: flex;
+}
+@media (max-width: 767px) {
+  #page-login .page-content .book-container {
+    min-height: 600px;
+    padding: 50px 20px 30px;
+  }
+}
+#page-login .page-content .book-container .calendly-inline-widget {
+  width: 100%;
+  min-width: 320px;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
