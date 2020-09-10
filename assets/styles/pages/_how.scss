@@ -1,0 +1,421 @@
+#page-how {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F1F5FD 100%);
+
+  #main-header {
+    padding: 72px 0 0;
+
+    @include tablet {
+      padding: 30px 0 0;
+    }
+
+    @include mobile {
+      padding: 20px 0 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile-and-tablet {
+        flex-wrap: wrap;
+      }
+    }
+
+    .text {
+      padding: 0;
+
+      @include desktop-wide {
+        padding: 0 0 0 39px;
+      }
+
+      @include mobile-and-tablet {
+        width: 100%;
+        order: 2;
+        margin: 30px 0 0;
+      }
+
+      h1 {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 500;
+
+        @include desktop-wide {
+          font-size: 36px;
+          line-height: 46px;
+        }
+
+        @include tablet {
+          font-size: 34px;
+          line-height: 42px;
+        }
+      }
+
+      h2 {
+        font-size: 17px;
+        line-height: 25px;
+        margin: 1px 0 0;
+        font-weight: 400;
+
+        @include desktop-wide {
+          font-size: 18px;
+          line-height: 27px;
+        }
+
+        @include tablet {
+          font-size: 18px;
+          line-height: 27px;
+        }
+
+        @include mobile {
+          margin: 15px 0 0;
+        }
+      }
+    }
+
+    .logo {
+      width: 300px;
+      height: 64px;
+      background-image: url("../images/logo.svg");
+      display: block;
+      margin: 4px 0 0;
+      flex-shrink: 0;
+
+      @include desktop-wide {
+        margin: 4px 110px 0 0;
+      }
+
+      @include mobile-and-tablet {
+        order: 1;
+      }
+
+      @include mobile {
+        width: 240px;
+        height: 51px;
+        background-size: 240px auto;
+        margin: 0;
+      }
+    }
+  }
+
+  .how {
+    padding: 49px 0;
+
+    @include tablet {
+      padding: 49px 0 70px;
+    }
+
+    @include mobile {
+      padding: 50px 0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .how-start {
+      width: 358px;
+      margin: 50px 0 0 0;
+      position: relative;
+
+      @include desktop-wide {
+        margin: 50px 0 0 59px;
+      }
+
+      @include tablet {
+        width: 330px;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin: 0;
+      }
+
+      &:after {
+        content: '';
+        width: 102px;
+        height: 380px;
+        background-image: url("../images/icon-arrow-gradient.svg");
+        position: absolute;
+        top: 29px;
+        right: -170px;
+
+        @include desktop-wide {
+          right: -127px;
+        }
+
+        @include tablet {
+          top: 135px;
+          right: -53px;
+          width: 44px;
+          height: 165px;
+          background-size: 44px auto;
+        }
+
+        @include mobile {
+          top: auto;
+          bottom: -88px;
+          left: 50%;
+          margin-left: -21.5px;
+          width: 43px;
+          height: 160px;
+          background-size: 43px auto;
+          transform: rotate(90deg);
+        }
+      }
+
+      li {
+        width: 100%;
+        background: #fff;
+        border: 1px solid #FFB800;
+        filter: drop-shadow(0px 0px 5px #FFB800);
+        border-radius: 8px;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 600;
+        padding: 25px 30px 23px 37px;
+        margin: 0 0 22px;
+        position: relative;
+        z-index: 2;
+
+        @include tablet {
+          padding: 25px 20px 23px;
+        }
+
+        @include mobile {
+          font-size: 17px;
+          line-height: 19px;
+          padding: 22px 15px 20px;
+        }
+      }
+    }
+
+    .how-results {
+      margin: 185px 0 0 164px;
+
+      @include tablet {
+        margin: 190px 0 0 0;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin: 35px 0 0;
+      }
+
+      li {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 500;
+        margin: 0 0 9px;
+        padding: 0 0 0 23px;
+        position: relative;
+
+        @include tablet {
+          font-size: 22px;
+          line-height: 32px;
+          padding: 0 0 0 15px;
+        }
+
+        @include mobile {
+          font-size: 20px;
+          line-height: 30px;
+        }
+
+        &:before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #FFB800;
+          position: absolute;
+          top: 12px;
+          left: 0;
+
+          @include mobile {
+            top: 10px;
+          }
+        }
+      }
+    }
+
+    .how-works {
+      width: 467px;
+      background: #fff;
+      box-shadow: 0 0 50px rgba(16, 37, 84, 0.25);
+      border-radius: 10px;
+      padding: 64px 41px 25px 40px;
+      margin: 50px 0 0;
+
+      @include desktop-wide {
+        margin: 0 0 0 51px;
+      }
+
+      @include mobile-and-tablet {
+        width: 350px;
+        padding: 30px 15px 25px 20px;
+        margin: 50px 0 0;
+      }
+
+      @include mobile {
+        width: 100%;
+        padding: 30px 25px 25px;
+      }
+
+      h3 {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 500;
+      }
+
+      ul {
+        margin: 35px 0 0;
+
+        @include mobile {
+          margin: 25px 0 0;
+        }
+
+        li {
+          padding: 0 0 0 0;
+          margin: 0 0 45px;
+          display: flex;
+          align-items: center;
+
+          @include mobile {
+            margin: 0 0 35px;
+          }
+
+          span {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(261.52deg, #467CE8 -1.34%, #2E63D6 100%);
+            box-shadow: 0 2.66667px 4px rgba(55, 105, 214, 0.4);
+            border-radius: 50%;
+            margin: 0 0 0 0;
+            flex-shrink: 0;
+
+            @include mobile {
+              width: 35px;
+              height: 35px;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 21px;
+            padding: 0 0 0 11px;
+          }
+        }
+      }
+
+      .btn-start {
+        font-size: 20px;
+        line-height: 18px;
+        font-weight: 500;
+        color: #fff;
+        background: #3769D6;
+        border-radius: 10px;
+        width: 100%;
+        padding: 16px;
+        margin: 20px 0 0;
+        text-align: center;
+
+        @include mobile {
+          margin: 15px 0 0;
+        }
+      }
+
+      .start-message {
+        font-size: 12px;
+        line-height: 18px;
+        color: #838790;
+        margin: 27px 0 0;
+        text-align: center;
+      }
+    }
+
+    .how-steps {
+      width: 420px;
+      display: flex;
+      justify-content: space-between;
+      margin: 95px 0 0;
+      flex-wrap: wrap;
+
+      @include desktop-wide {
+        width: 100%;
+        margin: 57px 0 0;
+      }
+
+      @include tablet {
+        width: 325px;
+        margin: 95px 0 0;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin: 70px 0 0;
+      }
+
+      li {
+        max-width: 100%;
+        display: flex;
+
+        @include desktop-wide {
+          max-width: 31.5%;
+        }
+
+        @include mobile {
+          margin: 0 0 30px;
+        }
+
+        .icon-container {
+          width: 60px;
+          height: 60px;
+          background: linear-gradient(261.52deg, #467CE8 -1.34%, #2E63D6 100%);
+          box-shadow: 0 4px 6px rgba(55, 105, 214, 0.4);
+          border-radius: 50%;
+          margin: 3px 0 0 0;
+          flex-shrink: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include mobile {
+            width: 50px;
+            height: 50px;
+          }
+
+          img {
+            display: block;
+
+            @include mobile {
+              transform: scale(0.8);
+            }
+          }
+        }
+
+        .text {
+          padding: 0 0 0 13px;
+
+          h4 {
+            font-size: 18px;
+            line-height: 27px;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 12px;
+            line-height: 18px;
+            margin: 4px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

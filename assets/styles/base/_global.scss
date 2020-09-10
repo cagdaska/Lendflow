@@ -1,0 +1,54 @@
+html{
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: $col_black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1010px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @include desktop-wide{
+    padding: 0 40px;
+    max-width: 1566px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 25px;
+  }
+
+  @include mobile {
+    max-width: 460px;
+    padding: 0 20px;
+  }
+}
+
+.mobile-only {
+  @include mobile {
+    display: block;
+  }
+
+  @include not-mobile {
+    display: none;
+  }
+}
+
+.tablet-desktop-only {
+  @include mobile {
+    display: none;
+  }
+
+  @include not-mobile {
+    display: block;
+  }
+}
