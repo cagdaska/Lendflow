@@ -897,10 +897,17 @@ body {
   background: #F59D1B url("../images/icon-quotes.svg") -15px -41px no-repeat;
   padding: 50px 0 48px;
   flex-grow: 1;
+  overflow: hidden;
 }
 #page-login aside .quote-container .slider-container {
   display: flex;
+  height: 0;
+  opacity: 0;
   flex-wrap: wrap;
+}
+#page-login aside .quote-container .slider-container.shown {
+  height: auto;
+  opacity: 1;
 }
 #page-login aside .quote-container .slider-container .slide {
   color: #fff;
