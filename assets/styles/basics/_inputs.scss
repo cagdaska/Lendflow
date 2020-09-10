@@ -1,0 +1,34 @@
+.input-line{
+  margin: 15px 0 0;
+  position: relative;
+
+  .input-text{
+    width: 100%;
+    background: #fff;
+    border: 1px solid #EBEEF5;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px 14px;
+    outline: none;
+    -webkit-appearance: none;
+
+    &::placeholder{
+      color: #838790;
+    }
+
+    &:focus{
+      border: 1px solid $col_blue;
+    }
+  }
+
+  .btn-show-pass{
+    width: 24px;
+    height: 24px;
+    background: url("../images/icon-hidden.svg") 50% 50% no-repeat;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    z-index: 2;
+  }
+}
