@@ -4,5 +4,14 @@
 @import 'base/fonts';
 @import 'base/global';
 
+// Basics
+@import 'basics/inputs';
+@import 'basics/buttons';
+
+// Plugins
+@import 'plugins/slick';
+@import 'plugins/slick-theme';
+
 // Pages
 @import 'pages/how';
+@import 'pages/login';

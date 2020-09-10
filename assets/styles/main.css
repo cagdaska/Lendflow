@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
@@ -69,6 +70,7 @@ input::-webkit-inner-spin-button {
 
 html {
   min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -125,6 +127,295 @@ body {
   .tablet-desktop-only {
     display: block;
   }
+}
+
+.input-line {
+  margin: 15px 0 0;
+  position: relative;
+}
+.input-line .input-text {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #EBEEF5;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 10px 14px;
+  outline: none;
+  -webkit-appearance: none;
+}
+.input-line .input-text::placeholder {
+  color: #838790;
+}
+.input-line .input-text:focus {
+  border: 1px solid #3769D6;
+}
+.input-line .btn-show-pass {
+  width: 24px;
+  height: 24px;
+  background: url("../images/icon-hidden.svg") 50% 50% no-repeat;
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  z-index: 2;
+}
+
+.btn {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.1s;
+}
+.btn.btn-blue {
+  background: linear-gradient(261.52deg, #467CE8 -1.34%, #2E63D6 100%);
+  box-shadow: 0px 4px 6px rgba(55, 105, 214, 0.4);
+  color: #fff;
+}
+.btn.btn-blue:hover {
+  background: linear-gradient(261.52deg, #4674e8 -1.34%, #2e52d6 100%);
+  box-shadow: 0px 4px 6px rgba(55, 105, 214, 0.6);
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+[dir=rtl] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+.slick-prev:before {
+  content: "←";
+}
+[dir=rtl] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+[dir=rtl] .slick-next {
+  left: -25px;
+  right: auto;
+}
+.slick-next:before {
+  content: "→";
+}
+[dir=rtl] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
 }
 
 #page-how {
@@ -560,6 +851,233 @@ body {
   font-size: 12px;
   line-height: 18px;
   margin: 4px 0 0;
+}
+
+#page-login {
+  min-height: 100%;
+  height: 100%;
+  background-color: #F1F5FD;
+}
+#page-login .page-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#page-login aside {
+  width: 350px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #page-login aside {
+    width: 300px;
+  }
+}
+@media (max-width: 767px) {
+  #page-login aside {
+    width: 100%;
+    min-height: auto;
+    order: 2;
+    margin: 40px 0 0;
+  }
+}
+#page-login aside .img-container {
+  width: 100%;
+}
+#page-login aside .img-container img {
+  width: 100%;
+  display: block;
+}
+#page-login aside .quote-container {
+  width: 100%;
+  background: #F59D1B url("../images/icon-quotes.svg") -15px -41px no-repeat;
+  padding: 50px 0 48px;
+  flex-grow: 1;
+}
+#page-login aside .quote-container .slider-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#page-login aside .quote-container .slider-container .slide {
+  color: #fff;
+  padding: 0 50px 0 43px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #page-login aside .quote-container .slider-container .slide {
+    padding: 0 25px;
+  }
+}
+#page-login aside .quote-container .slider-container .slide:focus {
+  outline: none;
+}
+#page-login aside .quote-container .slider-container .slide .quote-text {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+#page-login aside .quote-container .slider-container .slide .quote-owner {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-style: normal;
+  margin: 20px 0 0;
+}
+#page-login aside .quote-container .slider-container .slide .quote-owner span {
+  font-size: 14px;
+  line-height: 21px;
+  opacity: 0.5;
+  display: block;
+  margin: 5px 0 0;
+}
+#page-login aside .quote-container .slider-container .slick-list {
+  width: 100%;
+  margin: 0 0 14px;
+}
+#page-login aside .quote-container .slider-container .slick-arrow {
+  width: 20px;
+  height: 21px;
+  position: static;
+  order: 2;
+  background: url("../images/icon-caret-right.svg") no-repeat 50% 50%;
+  transform: none;
+  align-self: flex-start;
+}
+#page-login aside .quote-container .slider-container .slick-arrow:before {
+  display: none;
+}
+#page-login aside .quote-container .slider-container .slick-arrow.slick-prev {
+  transform: rotate(180deg);
+  margin: 0 0 0 37px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #page-login aside .quote-container .slider-container .slick-arrow.slick-prev {
+    margin: 0 0 0 21px;
+  }
+}
+#page-login .page-content {
+  flex-grow: 1;
+  text-align: center;
+  padding: 70px 0 0;
+}
+@media (max-width: 767px) {
+  #page-login .page-content {
+    padding: 30px 20px 0;
+  }
+}
+#page-login .page-content .inner-content {
+  max-width: 411px;
+  margin: 0 auto;
+}
+#page-login .page-content .logo {
+  width: 175px;
+  height: 37px;
+  background-image: url("../images/logo.svg");
+  background-size: 175px auto;
+  display: block;
+  margin: 0 auto;
+}
+#page-login .page-content .heading-container {
+  margin: 168px 0 0;
+}
+@media (max-width: 767px) {
+  #page-login .page-content .heading-container {
+    margin: 30px 0 0;
+  }
+}
+#page-login .page-content .heading-container .heading {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+}
+#page-login .page-content .heading-container .sub-heading {
+  font-size: 14px;
+  line-height: 28px;
+  color: #868D9C;
+  margin: 14px 0 0;
+}
+@media (max-width: 767px) {
+  #page-login .page-content .heading-container .sub-heading {
+    line-height: 20px;
+  }
+}
+#page-login .page-content .form {
+  max-width: 400px;
+  margin: 50px auto 0;
+}
+#page-login .page-content .form .login-options {
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+#page-login .page-content .form .login-options .remember input {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+#page-login .page-content .form .login-options .remember input:focus + label:before {
+  border-color: #3769D6;
+}
+#page-login .page-content .form .login-options .remember input:checked + label:before {
+  background-color: #3769D6;
+  border-color: #3769D6;
+}
+#page-login .page-content .form .login-options .remember input:checked + label:after {
+  opacity: 1;
+}
+#page-login .page-content .form .login-options .remember label {
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+  padding: 0 0 0 33px;
+  cursor: pointer;
+}
+#page-login .page-content .form .login-options .remember label:before, #page-login .page-content .form .login-options .remember label:after {
+  content: "";
+  position: absolute;
+  transition: all 0.1s;
+}
+#page-login .page-content .form .login-options .remember label:before {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  top: 1px;
+  left: 1px;
+}
+#page-login .page-content .form .login-options .remember label:after {
+  width: 10px;
+  height: 9px;
+  background-image: url("../images/icon-tick.svg");
+  top: 5px;
+  left: 4px;
+  opacity: 0;
+}
+#page-login .page-content .form .login-options .forgot-pass {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 0;
+}
+#page-login .page-content .form .btn-login {
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 12px;
+}
+#page-login .page-content .form .get-started {
+  font-size: 14px;
+  line-height: 14px;
+  color: #302D3D;
+  margin: 30px 0 0;
+}
+#page-login .page-content .form .get-started a {
+  text-decoration: underline;
+  color: #969DB6;
 }
 
 /*# sourceMappingURL=main.css.map */
